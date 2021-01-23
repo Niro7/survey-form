@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Survey Form</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <h1 id="title">Customer Satisfaction Survey Form</h1>
+    <p id="description">
+      We want to know how satisfied are you with our products. <br> Thank you for
+      your participation and we appreciate your feedback.
+    </p>
+    <p>Required fields followed by <span id="required">*</span></p>
+    <form id="survey-form">
+      <fieldset class="cutomer-info">
+        <legend>Customer Details:</legend>
+        <label for="name" id="name-label"> Name<span id="required">*</span>: </label>
+        <input
+          type="text"
+          id="name"
+          name="name"
+          placeholder="Enter your Name"
+          required
+        />
+        <label for="email" id="email-label"> Email<span id="required">*</span>: </label>
+        <input
+          type="email"
+          id="email"
+          name="email"
+          placeholder="Enter a valid email"
+          required
+        />
+      </fieldset>
+      <fieldset class="cutomer-feedback">
+        <legend>Feedback:</legend>
+        <label for="number" id="number-label">
+          How likely is it that you would recommend this company to a friend or
+          colleague (0-10)?</label
+        >
+        <input
+          type="number"
+          id="number"
+          name="number"
+          placeholder="Enter Number"
+          min="0"
+          max="10"
+        />
+
+        <!--Dropdown options-->
+
+        <label for="dropdown"
+          >How long have you been a customer of our company?</label
+        >
+        <select name="dropdown" id="dropdown">
+          <option value="default">--Select--</option>
+          <option value="first_purchase">This is my first purchase</option>
+          <option value="belowsixmonths">Less than six months</option>
+          <option value="abovesixmonths">Six months to a year</option>
+          <option value="onetotwoyears">1 - 2 years</option>
+          <option value="threeormoreyears">3 or more years</option>
+          <option value="nopurchase">I haven't made a purchase yet</option>
+        </select>
+
+        <!--   Radio Buttons -->
+
+        <label for="satisfaction"
+          >Overall, how satisfied or dissatisfied are you with our
+          company?</label
+        >
+        <input
+          type="radio"
+          value="verysatisfied"
+          id="verysatisfied"
+          name="satisfaction"
+        /><label for="verysatisfied">Very satisfied</label>
+        <input
+          type="radio"
+          value="somewhatsatisfied"
+          id="somewhatsatisfied"
+          name="satisfaction"
+        /><label for="somewhatsatisfied">Somewhat satisfied</label>
+        <input
+          type="radio"
+          value="neither"
+          id="neither"
+          name="satisfaction"
+        /><label for="neither">Neither satisfied nor dissatisfied</label>
+        <input
+          type="radio"
+          value="somewhatdissatisfied"
+          id="somewhatdissatisfied"
+          name="satisfaction"
+        /><label for="somewhatdissatisfied">Somewhat dissatisfied</label>
+        <input
+          type="radio"
+          value="verydissatisfied"
+          id="verydissatisfied"
+          name="satisfaction"
+        /><label for="verydissatisfied">Very dissatisfied</label>
+        <!-- Check boxes   -->
+        <label for="product_description"
+          >Which of the following words would you use to describe our products?
+          Select all that apply.</label
+        >
+
+        <input type="checkbox" value="reliable" id="reliable" name="reliable" />
+        <label for="reliable">Reliable</label>
+        <input
+          type="checkbox"
+          value="high quality"
+          id="high quality"
+          name="high quality"
+        />
+        <label for="high quality">High quality</label>
+
+        <input type="checkbox" value="useful" id="useful" name="useful" />
+        <label for="useful">Useful</label>
+
+        <input type="checkbox" value="unique" id="unique" name="unique" />
+        <label for="unique">Unique</label>
+
+        <input
+          type="checkbox"
+          value="good_value"
+          id="good_value"
+          name="good_value"
+        />
+        <label for="good_value">Good value for money</label>
+        <input
+          type="checkbox"
+          value="
+overpriced"
+          id="
+overpriced"
+          name="
+overpriced"
+        />
+        <label
+          for="
+overpriced"
+        >
+          Overpriced</label
+        >
+        <input
+          type="checkbox"
+          value="impractical"
+          id="impractical"
+          name="impractical"
+        />
+        <label for="impractical">Impractical</label>
+        <input
+          type="checkbox"
+          value="ineffective"
+          id="ineffective"
+          name="ineffective"
+        />
+        <label for="ineffective">Ineffective</label>
+        <input type="checkbox" value="poor" id="poor" name="poor" />
+        <label for="poor">Poor quality</label>
+        <input
+          type="checkbox"
+          value="unreliable"
+          id="unreliable"
+          name="unreliable"
+        />
+        <label for="unreliable">Unreliable</label>
+
+        <label for="response"
+          >How responsive have we been to your questions or concerns about our
+          products?</label
+        >
+        <input
+          type="radio"
+          value="extremely"
+          id="extremely"
+          name="response"
+        /><label for="extremely">Extremely responsive</label>
+        <input type="radio" value="very" id="very" name="response" /><label
+          for="very"
+          >Very responsive</label
+        >
+        <input
+          type="radio"
+          value="somewhat"
+          id="somewhat"
+          name="response"
+        /><label for="somewhat">Somewhat responsive</label>
+        <input type="radio" value="notso" id="notso" name="response" /><label
+          for="notso"
+          >Not so responsive</label
+        >
+        <input
+          type="radio"
+          value="notatall"
+          id="notatall"
+          name="response"
+        /><label for="notatall">Not at all responsive</label>
+        <input
+          type="radio"
+          value="notapplicable"
+          id="notapplicable"
+          name="response"
+        /><label for="notapplicable">Not applicable</label>
+        <!--  Textarea  -->
+
+        <label for="comments"
+          >Do you have any other comments, suggestions or questions?</label
+        >
+        <textarea name="comments" id="comments" cols="" rows=""></textarea>
+      </fieldset>
+
+      <!-- Submit Button -->
+      <input type="submit" id="submit" value="Submit" />
+    </form>
+  </body>
+</html>
