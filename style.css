@@ -1,5 +1,7 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300;400;500;700;900&display=swap");
 body {
   margin: 0;
+  font-family: 'Montserrat', sans-serif;
   background-image: url("images/olena-sergienko-dIMJWLx1YbE-unsplash.jpg");
   background-size: cover;
   background-attachment: fixed;
