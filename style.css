@@ -1,8 +1,8 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300;400;500;700;900&display=swap");
 body {
   margin: 0;
-  font-family: 'Montserrat', sans-serif;
-  background-image: url("images/olena-sergienko-dIMJWLx1YbE-unsplash.jpg");
+  font-family: "Montserrat", sans-serif;
+  background-image: url("https://images.unsplash.com/photo-1535957998253-26ae1ef29506?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=376&q=80");
   background-size: cover;
   background-attachment: fixed;
   background-blend-mode: multiply;
@@ -10,13 +10,18 @@ body {
   backdrop-filter: blur(5px);
   padding: 20px 0;
 }
-body > h1,
+h1,
 p {
   text-align: center;
   color: white;
 }
+fieldset {
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 10px;
+}
 form {
-  background: rgba(255, 255, 255, 0.65);
+  background: rgba(255, 255, 255, 0.6);
   box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
   backdrop-filter: blur(4px);
   -webkit-backdrop-filter: blur(4px);
@@ -25,6 +30,69 @@ form {
   margin: 10px auto;
   padding: 3vmin;
 }
+input {
+  border-radius: 2px;
+  border: none;
+}
+label {
+  padding-left: 7px;
+}
+#name,
+#email {
+  height: 65%;
+}
+#name,
+#email,
+#number,
+#comments {
+  width: 100%;
+}
 #required {
   color: #e80808;
+}
+#submit {
+  border: none;
+  outline: none;
+  display: block;
+  margin: auto;
+  padding: 10px;
+  background-color: rgb(0, 102, 255);
+  color: white;
+  text-transform: uppercase;
+}
+#submit:hover {
+  cursor: pointer;
+  background-color: rgb(2, 89, 219);
+}
+.form-group {
+  margin: 5px 0;
+  padding: 5px;
+  flex-grow: 1;
+}
+.options {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+.option-group input,
+.option-group label {
+  cursor: pointer;
+}
+.option-group:hover{
+    background: rgba(255, 255, 255, 0.178);
+    border-radius: 5px;
+}
+@media (max-width: 764px) {
+  .radio {
+    grid-template-columns: 1fr;
+  }
+}
+@media (max-width: 580px) {
+  .options {
+    grid-template-columns: 1fr;
+  }
+}
+@media (max-width: 375px) {
+  body {
+    font-size: 13px;
+  }
 }
